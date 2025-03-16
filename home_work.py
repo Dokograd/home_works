@@ -1,40 +1,48 @@
-from random import choice
+from random import randint,choice
 
-
+# print(randint(1, 100) )
 def computer_choice():
-    return choice(['tash', 'kaichy', 'kagaz'])
+
+
+    return randint(1, 10)
+
 
 
 def user_choice():
-    print('1,tash')
-    print('2,kaichy')
-    print('3,kagaz')
-    choice_ = int(input("chooce on this:"))
-    if choice_ == 1:
-        return "tash"
-    elif choice_ == 2:
-        return "kaichy"
-    elif choice_ == 3:
-        return "kagaz"
-    else:
-        return -1
+    choice_ = int(input(" enter a san: "))
+    return choice_
 
 
 def check(c_choice, u_choice):
     if c_choice == u_choice:
-        return 'nichy'
-    elif c_choice == " tash" and (u_choice == "kaichy"):
-        print(f"Computer: {c_choice} - User: {u_choice}")
-        return 'you are lose'
-    elif c_choice == "kaichy" and u_choice == "kagaz":
-        print(f"Computer: {c_choice} - User: {u_choice}")
-        return 'you are lose'
-    elif c_choice == "kagaz" and u_choice == "tash":
-        print(f"Computer: {c_choice} - User: {u_choice}")
-
-        return 'you are lose'
+        return"ugadal"
     else:
-        print(f"Computer: {c_choice} - User: {u_choice}")
-        return "YES! you are win"
+        return"ne ugadal"
+
+
+def main():
+    while True:
+        print("1. Start")
+        print("2. Exit")
+        choice_ = int(input(" choosing:"))
+        if choice_ == 1:
+            while True:
+                com_choice = computer_choice()
+                us_choice = user_choice ()
+                if user_choice == -1:
+                    print("false choice")
+                    continue
+                res = check(com_choice, us_choice)
+                print(res)
+        elif choice_ == 2:
+            break
+        else:
+            print("false choice")
+main()
+
+
+
+
+
 
 
